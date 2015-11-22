@@ -1,0 +1,21 @@
+#include <stdio.h>
+   
+int main() {
+   
+    int N[20], c/*controle do for*/, d, ct/*armazena o valor do numero digitado em determinada posicao*/;
+    for(c=0;c<20;c++){
+        scanf("%d", &N[c]);
+    }
+    d=19;
+    for(c=0;c<10;c++){
+        ct=N[c];//recebe o valor de cada posicao no vetor
+        N[c]=N[d];//d= ultimo numero
+        N[d]=ct;//valor recebido anteriormente armazenado no valor de vetor N[d];
+        d--;
+    }
+    for(c=0;c<20;c++){
+        printf("N[%d] = %d\n",c,N[c]);
+    }
+   
+    return 0;
+}
