@@ -1,0 +1,37 @@
+#include <stdio.h>
+  
+int main() {
+ //tentei com a variavel do tipo inteiro e nao aceitou entao li no forum que tinha que usar string ou char
+     char num[100];
+  int tot=0, c, N, c2;//c= contador para o for 2// c2 contador para o primeiro for
+  scanf("%d", &N);
+  for(c2=0;c2<N;c2++){//quantidade de execuções do programa
+    scanf("%s", &num);
+  for(c=0;c<strlen(num);c++){//analisar a quantidade de leds por numero
+    if(num[c]=='0')
+        tot+=6;
+        else if(num[c]=='1')
+        tot+=2;
+        else if(num[c]=='2')
+        tot+=5;
+        else if(num[c]=='3')
+        tot+=5;
+        else if(num[c]=='4')
+        tot+=4;
+        else if(num[c]=='5')
+        tot+=5;
+        else if(num[c]=='6')
+        tot+=6;
+        else if(num[c]=='7')
+        tot+=3;
+        else if(num[c]=='8')
+        tot+=7;
+        else if(num[c]=='9')
+        tot+=6;//em cada caso analisa-se o numero e soma a quantidade ao total de leds
+    }
+  printf("%d leds\n", tot);
+  tot=0;//zerei o total para nao somar com os loopings anteriores
+  }
+  
+    return 0;
+}
